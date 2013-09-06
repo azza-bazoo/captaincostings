@@ -157,4 +157,10 @@ $(function() {
       }
     });
   }
+
+  $("#about_header").show();
+  $("#about_header button").on("click", function(e) {
+    e.preventDefault();
+    $("#about").modal();
+  });
 });

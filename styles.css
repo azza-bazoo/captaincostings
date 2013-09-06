@@ -42,8 +42,11 @@ body { margin: 0; padding: 0; }
 #labor { float: left; }
 #liberal { float: right; }
 
-#main {
+#main, #about_header, #about {
   font-family: "Source Sans Pro", sans-serif;
+}
+
+#main {
   margin: 0 30px 50px 30px;
 }
 
@@ -113,4 +116,54 @@ hr:after {
   padding: 0 10px;
   background: white;
   z-index: 10;
+}
+
+#about_header {
+  margin: 50px 0;
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background: #fee0e0;
+  border: solid 1px #c00;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#about {
+  z-index: 50 !important; /* le sigh */
+}
+
+.blocker { z-index: 40 !important; }
+
+.modal {
+  display: none;
+  width: 700px;
+  background: #fff;
+  padding: 15px 30px 15px 30px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+}
+
+a.close-modal {
+  position: absolute;
+  top: -12.5px;
+  right: -12.5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background: url("img/close.png") no-repeat 0 0;
 }
