@@ -3,7 +3,7 @@ body { margin: 0; padding: 0; }
 #header_text, #header_overlay {
   position: fixed;
   width: 100%;
-  height: 55px;
+  height: 100px;
   top: 0;
 }
 
@@ -18,16 +18,20 @@ body { margin: 0; padding: 0; }
   text-align: center;
 }
 
+#header_text img {
+  vertical-align: middle;
+}
+
 #header_text h1 {
   font-family: "Luckiest Guy", cursive;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
-  margin: 15px 0 0 0;
+  margin: 0 0 0 0;
 }
 
 #introduction {
-  margin: 75px 0 0 0;
+  margin: 120px 0 0 0;
 }
 
 #labor, #liberal {
