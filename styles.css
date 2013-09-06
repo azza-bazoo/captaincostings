@@ -1,4 +1,18 @@
 body { margin: 0; padding: 0; background: url("img/clean_textile.png"); }
+@media (min-resolution: 192dpi) {
+  body { background: url('img/clean_textile@2x.png'); }
+}
+
+
+a {
+  color: #0000cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #da0000;
+}
 
 #header_text, #header_overlay {
   position: fixed;
@@ -71,16 +85,6 @@ body { margin: 0; padding: 0; background: url("img/clean_textile.png"); }
   width: 300px;
   min-height: 7.5em;
   line-height: 125%;
-}
-
-.desc a {
-  color: #0000cc;
-  text-decoration: none;
-}
-
-.desc a:hover {
-  text-decoration: underline;
-  color: #da0000;
 }
 
 .left_graph { float: left; }
