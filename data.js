@@ -21,7 +21,7 @@ data = {
       {
         "label": "Direct-action emissions reduction fund",
         "spending": 1550
-      }
+      },
       {
         "label": "Company tax rate cut",
         "spending": 4900
@@ -32,14 +32,6 @@ data = {
     "title": "Families",
     "desc": "The Liberal paid parental leave scheme will cost more than twice as much as Labor&#8217;s scheme, funded by cutting the existing Schoolkids Bonus and introducing a levy on large employers.",
     "alp": [
-      /* TODO: not really family? {
-        "label": "Supplementary welfare allowance",
-        "spending": 1106
-      },*/
-      /* and where to put this one? {
-        "label": "Cuts to car industry subsidies",
-        "revenue": 500
-      }*/
       {
         "label": "Schoolkids Bonus",
         "spending": 4641
