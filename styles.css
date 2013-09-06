@@ -26,9 +26,25 @@ body { margin: 0; padding: 0; }
   margin: 15px 0 0 0;
 }
 
+#introduction {
+  margin: 75px 0 0 0;
+}
+
+#labor, #liberal {
+  margin-bottom: 25px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  /* width set by JavaScript */
+}
+#labor img { width: 135px; vertical-align: bottom; }
+#liberal img { width: 80px; vertical-align: bottom; }
+#labor { float: left; }
+#liberal { float: right; }
+
 #main {
   font-family: "Source Sans Pro", sans-serif;
-  margin: 75px 30px 50px 30px;
+  margin: 0 30px 50px 30px;
 }
 
 .segment {

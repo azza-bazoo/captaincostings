@@ -1,10 +1,11 @@
 
+var chart_width = (window.innerWidth - 360) / 2;
 var chart_size = {
   "column": 40,
   "height": 40 * 3,
-  "width": (window.innerWidth - 360) / 2,
+  "width": chart_width,
   "margin": 4,
-  "zero": (window.innerWidth - 360) / 4
+  "zero": chart_width / 2
 }
 
 var generateScales = function(max_value) {
@@ -123,6 +124,9 @@ var getSegmentData = function(segment, key) {
 var charts = {};
 
 $(function() {
+  $("#labor").width(chart_width);
+  $("#liberal").width(chart_width);
+
   var source   = $("#segment_template").html();
   var template = Handlebars.compile(source);
 
