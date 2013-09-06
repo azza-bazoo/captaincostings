@@ -1,0 +1,64 @@
+
+.segment {
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 21px;
+  margin: 0 0 15px 0;
+}
+
+.desc {
+  font-size: 15px;
+  margin: 0 auto;
+  font-style: italic;
+  width: 300px;
+  line-height: 125%;
+}
+
+
+/* http://stackoverflow.com/a/15216151 */
+/*hr {
+    border: 0;
+    height: 1px;
+}
+hr:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr:after {
+    content:'';
+    height: 0.5em;
+    top: 1px;
+}
+hr:before, hr:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+}
+hr, hr:before {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+body, hr:after {
+    background: #f4f4f4;
+}*/
+
+/* http://css-tricks.com/examples/hrs/ */
+hr {
+  margin: 30px 200px 5px 200px;
+  padding: 0;
+  border: none;
+  border-top: medium double #bbb;
+  text-align: center;
+}
+hr:after {
+  content: "§";
+  color: #666;
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
