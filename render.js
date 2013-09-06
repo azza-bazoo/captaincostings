@@ -124,8 +124,8 @@ var getSegmentData = function(segment, key) {
 var charts = {};
 
 $(function() {
-  $("#labor").width(chart_width);
-  $("#liberal").width(chart_width);
+  $(".labor").width(chart_width);
+  $(".liberal").width(chart_width);
 
   var source   = $("#segment_template").html();
   var template = Handlebars.compile(source);
@@ -157,6 +157,24 @@ $(function() {
       }
     });
   }
+
+  $("img.captain").on("click", function(e) {
+    var body = $("body");
+    if (body.scrollTop() > 0) {
+      body.animate({ scrollTop: 0 }, '500');
+    }
+  });
+
+  $(window).on("scroll", function(e) {
+    var top = $(window).scrollTop();
+
+    if (top >= $("#parties .liberal img").offset().top) {
+      $("#header_overlay").show();
+      // $("#header_overlay .captain").fadeIn(200);
+    } else {
+      $("#header_overlay").fadeOut(200);
+    }
+  });
 
   $("#about_header").show();
   $("#about_header a").on("click", function(e) {
