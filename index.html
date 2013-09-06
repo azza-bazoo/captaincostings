@@ -10,17 +10,19 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div id="header_overlay"></div>
+    <!-- <div id="header_overlay"></div> -->
     <div id="header_text"><h1>Captain <img src="img/captain.png" alt=""> Costings</h1></div>
 
     <div id="introduction">
+      <p>Maybe you&#8217;ve heard: there&#8217;s an election today. Yarrr!</p>
+      <p>To buy your votes, both parties have thrown promises around like candy. Or loot. But which promises be usin&#8217; up more gold sovereigns?</p>
+      <p><strong>The Captain can help!</strong></p>
+      <p>Let&#8217;s take a simple look at each party&#8217;s biggest budget bursters.</p>
+    </div>
+
+    <div id="parties">
       <div id="labor"><img src="img/labor.brand.png" alt=""></div>
       <div id="liberal"><img src="img/liberal.png" alt=""></div>
-      <!-- <div class="desc">
-        <p>Confused by the madness of costings announcements?</p>
-        <p>... of course you are.</p>
-        <button>Let&#8217;s take a simple look at their budget promises.</button>
-      </div> -->
     </div>
 
     <div id="main"></div>
@@ -42,12 +44,12 @@
       <p>I&#8217;m <a href="http://hourann.com">Hourann Bosci</a> (<a href="http://twitter.com/daBosq">@daBosq on Twitter</a>). I am not affiliated with any party, but am disappointed at the decidedly unclear media coverage of each party&#8217;s budget plans.</p>
       <p>Send bouquets or brickbats c/o <a href="http://synclabs.com.au">Sync Labs</a>, 6/663 Newcastle St, Leederville WA 6007.</p>
       <p>This site&#8217;s source code <a href="https://github.com/azza-bazoo/captaincostings">is on GitHub</a> and is <a href="https://github.com/azza-bazoo/captaincostings/blob/master/LICENCE.md">MIT licenced</a>. Hosting is by the fine folks at <a href="http://www.orionvm.com.au">OrionVM</a> in Sydney. Graphics are generated <a href="http://d3js.org/">in D3.js</a>. The pirates <a href="http://www.shutterstock.com/pic-96796096/stock-vector-cartoon-pirate.html">come <a href="http://www.shutterstock.com/pic-86860939/stock-vector-pure-series-hand-drawn-pirate-icon-set.html">from</a> <a href="http://www.shutterstock.com/pic-86860960/stock-vector-pure-series-hand-drawn-pirate-icon-set.html">Shutterstock</a>.</p>
-      </p>All other content is released under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/au/">Creative Commons Attribution-ShareAlike 3.0 Australia</a> licence.</p>
+      </p>All other text is released under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/au/">Creative Commons Attribution-ShareAlike 3.0 Australia</a> licence.</p>
     </div>
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="lib/d3.v3.min.js"></script>
-    <script src="lib/handlebars.js"></script>
+    <script src="lib/handlebars.min.js"></script>
     <script src="data.js"></script>
     <script src="render.js"></script>
     <script src="lib/jquery.modal.min.js"></script>
