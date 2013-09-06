@@ -28,9 +28,15 @@ var svg_width_value = function(d) {
   return Math.abs(x_scale(d.value));
 };
 
-var setupChart = function(parent_el) {
+var setupChart = function(parent_el, data) {
   // TODO: rather hacky, yes
-  var sample_data = [{ value: 0 }, { value: 0 }, { value: 0 }];
+  var sample_data = []
+  if (data) {
+    data.forEach(function() {
+      sample_data.push({ value: 0 });
+    });
+  }
+
   // parent_el comes from jQuery, i.e. is a list
   var chart = d3.select(parent_el[0]).append("svg")
     .attr("class", "chart")
@@ -41,14 +47,14 @@ var setupChart = function(parent_el) {
   .enter().append("rect")
     .attr("x", svg_x_value)
     .attr("y", function(d, i) { return y_scale(i) + chart_size.margin; })
-    .attr("width", svg_width_value)
+    .attr("width", 0)
     .attr("height", (chart_size.column - chart_size.margin * 2));
   chart.append("line")
     .attr("class", "zero")
     .attr("x1", chart_size.zero)
     .attr("x2", chart_size.zero)
     .attr("y1", 0)
-    .attr("y2", chart_size.height);
+    .attr("y2", sample_data.length * chart_size.column);
   return chart;
 }
 
@@ -144,10 +150,10 @@ $(function() {
     charts[segment] = {};
 
     // alp on left
-    charts[segment].left = setupChart($(".left_graph", segment_el));
+    charts[segment].left = setupChart($(".left_graph", segment_el), getSegmentData(segment, "alp"));
 
     // lib on right
-    charts[segment].right = setupChart($(".right_graph", segment_el));
+    charts[segment].right = setupChart($(".right_graph", segment_el), getSegmentData(segment, "lib"));
 
     segment_el.on('inview', function(event, isInView) {
       if (isInView) {
