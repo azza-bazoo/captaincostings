@@ -51,7 +51,7 @@ var setupChart = function(parent_el) {
   return chart;
 }
 
-var redrawChart = function(chart, new_data, side) {
+var redrawChart = function(chart, new_data) {
   if (!new_data) { return false; }  // TODO: do this check outside here?
 
   chart.selectAll("text.label")
@@ -79,16 +79,16 @@ var redrawChart = function(chart, new_data, side) {
       if (d.value < 0) { return "end"; } else { return "start"; }
     })
     .attr("fill", function(d) {
-      if ((d.value < 0 && side == "right") || (d.value > 0 && side == "left")) {
+      if (d.value < 0) {
         return "#0c0";
       } else {
         return "#f00";
       }
     })
-    .attr("dy", 4)
+    .attr("dy", 5)
     .attr("y", function(d, i) { return y_scale(i) + chart_size.column / 2; })
     .text(function(d) {
-      if ((d.value < 0 && side == "right") || (d.value > 0 && side == "left")) {
+      if (d.value < 0) {
         return "-$" + Math.abs(d.value).toLocaleString();
       } else {
         return "$" + Math.abs(d.value).toLocaleString();
@@ -114,8 +114,6 @@ var getSegmentData = function(segment, key) {
     if (item.spending) { value = item.spending; }
     if (item.saving) { value = 0 - item.saving; }
     if (item.revenue) { value = 0 - item.revenue; }
-
-    if (key == "alp") { value = 0 - value; }  // due to mirrored graphs; TODO: less hackified
     dataset.push({ label: item.label, value: value });
   });
 
@@ -150,8 +148,8 @@ $(function() {
     segment_el.on('inview', function(event, isInView) {
       if (isInView) {
         var segment = $(event.target).attr("rel");
-        redrawChart(charts[segment].left, getSegmentData(segment, "alp"), "left");
-        redrawChart(charts[segment].right, getSegmentData(segment, "lib"), "right");
+        redrawChart(charts[segment].left, getSegmentData(segment, "alp"));
+        redrawChart(charts[segment].right, getSegmentData(segment, "lib"));
       }
     });
   }

@@ -67,16 +67,16 @@ hr { clear: both; }
 /* charts */
 
 line.zero {
-  stroke: #333;
+  stroke: #999;
 }
 
 text.label {
-  font-size: 10px;
-  fill: #999;
+  font-size: 12px;
+  fill: #666;
 }
 
 text.value {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 /* http://css-tricks.com/examples/hrs/ */
