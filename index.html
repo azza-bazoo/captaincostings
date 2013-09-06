@@ -24,13 +24,13 @@
 
     <script id="segment_template" type="text/x-handlebars-template">
       <div class="segment" rel="{{segment}}">
+        <div class="left_graph"></div>
+        <div class="right_graph"></div>
         <h2>{{{title}}}</h2>
         {{#if image}}
           <img src="{{image}}" alt="">
         {{/if}}
         <p class="desc">{{{desc}}}</p>
-        <div class="left_graph"></div>
-        <div class="right_graph"></div>
       </div>
       <hr>
     </script>

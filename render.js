@@ -2,9 +2,9 @@
 var chart_size = {
   "column": 40,
   "height": 40 * 3,
-  "width": 400,
+  "width": (window.innerWidth - 360) / 2,
   "margin": 4,
-  "zero": 400/2
+  "zero": (window.innerWidth - 360) / 4
 }
 
 var generateScales = function(max_value) {
