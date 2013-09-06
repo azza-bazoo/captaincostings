@@ -6,9 +6,12 @@
     <title>Captain Costings: compare Liberal and Labor budget promises</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Luckiest+Guy" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div id="header_overlay"></div>
+    <div id="header_text"><h1>Captain Costings</h1></div>
 
     <div id="main"></div>
 
@@ -20,7 +23,7 @@
 
     <script id="segment_template" type="text/x-handlebars-template">
       <div class="segment">
-        <h1>{{{title}}}</h1>
+        <h2>{{{title}}}</h2>
         {{#if image}}
           <img src="{{image}}" alt="">
         {{/if}}
