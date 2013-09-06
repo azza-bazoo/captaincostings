@@ -86,7 +86,7 @@ data = {
   },
   "infrastructure": {
     "title": "Infrastructure",
-    "desc": "Tony Abbott wants to be the &#8220;infrastructure prime minister&#8221;, by cutting spending on rail and funding WestConnex, East-West Link, and the Brisbane Gateway instead.",
+    "desc": "Tony Abbott wants to be the &#8220;<a href=\"http://www.abc.net.au/news/2013-07-17/abbott-promises-to-fix-queenslands-bruce-highway/4825422\">infrastructure prime minister</a>&#8221;, by cutting spending on rail and funding WestConnex, East-West Link, and the Brisbane Gateway instead.",
     "alp": [
       {
         "label": "Rail projects in Brisbane, Melbourne, Perth",
