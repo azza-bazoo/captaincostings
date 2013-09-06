@@ -100,8 +100,8 @@ h1 img {
   line-height: 125%;
 }
 
-.left_graph { float: left; margin-top: 20px; }
-.right_graph { float: right; margin-top: 20px; }
+.left_graph { float: left; margin-top: 10px; }
+.right_graph { float: right; margin-top: 10px; }
 hr { clear: both; }
 
 /* charts */
@@ -112,6 +112,17 @@ rect {
 
 line.zero {
   stroke: #999;
+}
+
+.scale { display: none; }
+
+rect.scale {
+  fill: #eee;
+}
+
+text.scale {
+  font-size: 11px;
+  letter-spacing: 1px;
 }
 
 text.label {

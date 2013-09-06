@@ -2,7 +2,7 @@
 var chart_width = (window.innerWidth - 255) / 2;
 var chart_size = {
   "column": 40,
-  "height": 40 * 3,
+  "height": 40 * 3.5,
   "width": chart_width,
   "margin": 4,
   "zero": chart_width / 2
@@ -17,7 +17,7 @@ var generateScales = function(max_value) {
 var x_scale = generateScales(10000);
 var y_scale = d3.scale.linear()
   .domain([0, 3])
-  .range([0, chart_size.height]);
+  .range([0, chart_size.column * 3]);
 
 var svg_x_value = function(d) {
   if (d.value >= 0) { return chart_size.zero; }
@@ -47,7 +47,7 @@ var setupChart = function(parent_el, data) {
   .enter().append("rect")
     .attr("x", svg_x_value)
     .attr("y", function(d, i) { return y_scale(i) + chart_size.margin; })
-    .attr("width", 0)
+    .attr("width", svg_width_value)
     .attr("height", (chart_size.column - chart_size.margin * 2));
   chart.append("line")
     .attr("class", "zero")
@@ -55,6 +55,31 @@ var setupChart = function(parent_el, data) {
     .attr("x2", chart_size.zero)
     .attr("y1", 0)
     .attr("y2", sample_data.length * chart_size.column);
+  if (sample_data.length) {
+    chart.append("rect")
+      .attr("class", "scale")
+      .attr("x", chart_size.zero - 100)
+      .attr("y", chart_size.column * sample_data.length + 1)
+      .attr("width", 200)
+      .attr("height", 16);
+    chart.append("text")
+      .attr("class", "scale")
+      .attr("x", chart_size.zero - 10)
+      .attr("text-anchor", "end")
+      .attr("dy", 11)
+      .attr("stroke", "#393")
+      .attr("y", chart_size.column * sample_data.length + 1)
+      .text("savings ($m)");
+    chart.append("text")
+      .attr("class", "scale")
+      .attr("x", chart_size.zero + 10)
+      .attr("text-anchor", "start")
+      .attr("dy", 11)
+      .attr("stroke", "#d00")
+      .attr("y", chart_size.column * sample_data.length + 1)
+      .text("spending ($m)");
+
+  }
   return chart;
 }
 
@@ -163,6 +188,15 @@ $(function() {
       }
     });
   }
+
+  $(".graph svg").on("mouseenter", function(e) {
+    $(".scale", $(e.target)).stop();
+    $(".scale", $(e.target)).fadeIn(200);
+  });
+  $(".graph svg").on("mouseleave", function(e) {
+    $(".scale", $(e.target)).stop();
+    $(".scale", $(e.target)).fadeOut(200);
+  });
 
   $("img.captain").on("click", function(e) {
     var body = $("body");
