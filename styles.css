@@ -59,6 +59,12 @@ body { margin: 0; padding: 0; }
   color: #da0000;
 }
 
+/* charts */
+
+line.zero {
+  stroke: #333;
+}
+
 /* http://css-tricks.com/examples/hrs/ */
 hr {
   margin: 35px 200px 0 200px;

@@ -16,18 +16,21 @@
     <div id="main"></div>
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="lib/jquery.inview.js"></script>
     <script src="lib/d3.v3.min.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="data.js"></script>
     <script src="render.js"></script>
 
     <script id="segment_template" type="text/x-handlebars-template">
-      <div class="segment">
+      <div class="segment" rel="{{segment}}">
         <h2>{{{title}}}</h2>
         {{#if image}}
           <img src="{{image}}" alt="">
         {{/if}}
         <p class="desc">{{{desc}}}</p>
+        <div class="left_graph"></div>
+        <div class="right_graph"></div>
       </div>
       <hr>
     </script>
