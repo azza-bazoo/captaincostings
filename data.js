@@ -19,7 +19,7 @@ data = {
         "revenue": 4400
       },
       {
-        "label": "Direct-action emissions reduction fund",
+        "label": "Direct-action emissions reduction",
         "spending": 1550
       },
       {
@@ -89,13 +89,13 @@ data = {
     "desc": "Tony Abbott wants to be the &#8220;<a href=\"http://www.abc.net.au/news/2013-07-17/abbott-promises-to-fix-queenslands-bruce-highway/4825422\">infrastructure prime minister</a>&#8221;, by cutting spending on rail and funding WestConnex, East-West Link, and the Brisbane Gateway instead.",
     "alp": [
       {
-        "label": "Rail projects in Brisbane, Melbourne, Perth",
+        "label": "Rail (Brisbane, Melbourne, Perth)",
         "spending": 628
       }
     ],
     "lib": [
       {
-        "label": "Road projects in Sydney, Melbourne, Brisbane",
+        "label": "Roads (Sydney, Melbourne, Brisbane)",
         "spending": 4000
       }
     ]
@@ -115,11 +115,11 @@ data = {
     "desc": "Most of the other proposed Liberal savings come from reduced public sector spending.",
     "lib": [
       {
-        "label": "Not replacing public servants as they retire",
+        "label": "Not replacing retiring public servants",
         "saving": 5212
       },
       {
-        "label": "Cuts to existing public servant parental leave",
+        "label": "Cuts to public servant parental leave",
         "saving": 1229
       },
       {
