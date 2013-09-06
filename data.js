@@ -33,12 +33,12 @@ data = {
     "desc": "The Liberal paid parental leave scheme will cost more than twice as much as Labor&#8217;s scheme, funded by cutting the existing Schoolkids Bonus and introducing a levy on large employers.",
     "alp": [
       {
-        "label": "Schoolkids Bonus",
-        "spending": 4641
-      },
-      {
         "label": "Paid parental leave",
         "spending": 3665
+      },
+      {
+        "label": "Schoolkids Bonus",
+        "spending": 4641
       }
     ],
     "lib": [
@@ -102,7 +102,7 @@ data = {
   },
   "aid": {
     "title": "Foreign aid",
-    "desc": "To fund its road commitments, a Liberal government would significantly cut Australia&#8217;s  <a href=\"http://www.abc.net.au/news/2013-09-06/an-coalition-aid-cuts-reax/4940604\"> foreign aid budget</a>.",
+    "desc": "To fund its road commitments, a Liberal government would <a href=\"http://www.abc.net.au/news/2013-09-06/an-coalition-aid-cuts-reax/4940604\">cut about one quarter</a> of Australia&#8217;s foreign aid budget.",
     "lib": [
       {
         "label": "Cuts to foreign aid",
@@ -130,7 +130,7 @@ data = {
   },
   "regions": {
     "title": "Rural and regional areas",
-    "desc": "Labor has allocated funding for regional areas through an infrastructure fund and a deal with the states in the Murray basin, which the Liberal Party intends to cancel.",
+    "desc": "Labor has allocated funding for regional areas through an infrastructure <a href=\"https://www.infrastructure.gov.au/infrastructure/rifp/\">fund</a> and a deal with the states in the Murray basin, which the Liberal Party <a href=\"http://www.abc.net.au/news/2013-09-06/coalition-defends-planned-spending-cuts-for-murray-water-buyback/4939838\">intends to cancel</a>.",
     "alp": [
       {
         "label": "Regional Infrastructure Fund",
