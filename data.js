@@ -1,6 +1,7 @@
 data = {
   "bigbusiness": {
     "title": "Big business",
+    "image": "img/pirate-bigbusiness.png",
     "desc": "Labor&#8217;s carbon and mining taxes will pay for most of its other policies (and reduce pollution). Liberal policy will replace that revenue with spending on direct action and on a tax cut for all companies.",
     "alp": [
       {
@@ -30,7 +31,8 @@ data = {
   },
   "families": {
     "title": "Families",
-    "desc": "The Liberal paid parental leave scheme will cost more than twice as much as Labor&#8217;s scheme, funded by cutting the existing Schoolkids Bonus and introducing a levy on large employers.",
+    "image": "img/pirate-families.png",
+    "desc": "The Liberal <a href=\"http://www.liberal.org.au/latest-news/2013/08/18/tony-abbott-coalitions-paid-parental-leave-scheme\">paid parental leave scheme</a> will cost more than twice as much as Labor&#8217;s scheme, funded by cutting the existing Schoolkids Bonus and introducing a levy on large employers.",
     "alp": [
       {
         "label": "Paid parental leave",
@@ -50,6 +52,7 @@ data = {
   },
   "smallbusiness": {
     "title": "Small business",
+    "image": "img/pirate-smallbusiness.png",
     "desc": "The Liberals propose to cancel various small business tax cuts introduced by Labor.",
     "lib": [
       {
@@ -72,7 +75,8 @@ data = {
   },
   "superannuation": {
     "title": "Superannuation",
-    "desc": "A key part of Labor&#8217;s mining tax package was an increase in everyone&#8217;s level of super, along with an additional boost for low-income earners.",
+    "image": "img/pirate-superannuation.png",
+    "desc": "A key part of Labor&#8217;s mining tax package was an increase in everyone&#8217;s <a href=\"http://www.moresuper.gov.au/\">level of super</a>, along with an additional boost for low-income earners.",
     "alp": [
       {
         "label": "12% super guarantee",
@@ -86,6 +90,7 @@ data = {
   },
   "infrastructure": {
     "title": "Infrastructure",
+    "image": "img/pirate-infrastructure.png",
     "desc": "Tony Abbott wants to be the &#8220;<a href=\"http://www.abc.net.au/news/2013-07-17/abbott-promises-to-fix-queenslands-bruce-highway/4825422\">infrastructure prime minister</a>&#8221;, by cutting spending on rail and funding WestConnex, East-West Link, and the Brisbane Gateway instead.",
     "alp": [
       {
@@ -102,6 +107,7 @@ data = {
   },
   "aid": {
     "title": "Foreign aid",
+    "image": "img/pirate-aid.png",
     "desc": "To fund its road commitments, a Liberal government would <a href=\"http://www.abc.net.au/news/2013-09-06/an-coalition-aid-cuts-reax/4940604\">cut about one quarter</a> of Australia&#8217;s foreign aid budget.",
     "lib": [
       {
@@ -112,6 +118,7 @@ data = {
   },
   "publicservice": {
     "title": "The public service",
+    "image": "img/pirate-publicservice.png",
     "desc": "Most of the other proposed Liberal savings come from reduced public sector spending.",
     "lib": [
       {
@@ -130,7 +137,8 @@ data = {
   },
   "regions": {
     "title": "Rural and regional areas",
-    "desc": "Labor has allocated funding for regional areas through an infrastructure <a href=\"https://www.infrastructure.gov.au/infrastructure/rifp/\">fund</a> and a deal with the states in the Murray basin, which the Liberal Party <a href=\"http://www.abc.net.au/news/2013-09-06/coalition-defends-planned-spending-cuts-for-murray-water-buyback/4939838\">intends to cancel</a>.",
+    "image": "img/pirate-regions.png",
+    "desc": "Labor has allocated funding for regional areas through an <a href=\"https://www.infrastructure.gov.au/infrastructure/rifp/\">infrastructure fund</a> and a deal with the states in the Murray basin, which the Liberal Party <a href=\"http://www.abc.net.au/news/2013-09-06/coalition-defends-planned-spending-cuts-for-murray-water-buyback/4939838\">intends to cancel</a>.",
     "alp": [
       {
         "label": "Regional Infrastructure Fund",

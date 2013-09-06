@@ -3,6 +3,7 @@ body { margin: 0; padding: 0; background: url("img/clean_textile.png"); }
   body { background: url('img/clean_textile@2x.png'); }
 }
 
+img { border: none; }
 
 a {
   color: #0000cc;
@@ -82,19 +83,18 @@ a:hover {
   font-size: 15px;
   margin: 0 auto;
   font-style: italic;
-  width: 300px;
-  min-height: 7.5em;
+  width: 600px;
   line-height: 125%;
 }
 
-.left_graph { float: left; }
-.right_graph { float: right; }
+.left_graph { float: left; margin-top: 20px; }
+.right_graph { float: right; margin-top: 20px; }
 hr { clear: both; }
 
 /* charts */
 
 rect {
-  fill: #7a7a7a;
+  fill: #bababa;
 }
 
 line.zero {
@@ -137,15 +137,9 @@ hr:after {
   text-align: center;
 }
 
-button {
-  width: 200px;
-  height: 50px;
-  text-align: center;
-  background: #fee0e0;
-  border: solid 1px #c00;
-  border-radius: 8px;
-  font-size: 13px;
-  cursor: pointer;
+#about_header a img {
+  vertical-align: -16px;
+  margin-right: 8px;
 }
 
 #about {

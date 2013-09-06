@@ -1,5 +1,5 @@
 
-var chart_width = (window.innerWidth - 360) / 2;
+var chart_width = (window.innerWidth - 255) / 2;
 var chart_size = {
   "column": 40,
   "height": 40 * 3,
@@ -81,11 +81,9 @@ var redrawChart = function(chart, new_data) {
     })
     .attr("fill", function(d) {
       if (d.value < 0) {
-//      	return "#2c6d31";
-        return "#0c0";
+        return "#393";
       } else {
-        return "#f00";
-//		return "#1e0d6d";
+        return "#d00";
       }
     })
     .attr("dy", 5)
@@ -161,7 +159,7 @@ $(function() {
   }
 
   $("#about_header").show();
-  $("#about_header button").on("click", function(e) {
+  $("#about_header a").on("click", function(e) {
     e.preventDefault();
     $("#about").modal();
   });
