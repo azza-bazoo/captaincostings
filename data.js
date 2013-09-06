@@ -140,7 +140,7 @@ data = {
     "lib": [
       {
         "label": "Cuts to Murray-Darling Water Buybacks",
-        "savings": 650
+        "saving": 650
       },
     ]
   }
