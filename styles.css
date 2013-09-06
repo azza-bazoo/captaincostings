@@ -65,6 +65,15 @@ line.zero {
   stroke: #333;
 }
 
+text.label {
+  font-size: 10px;
+  fill: #999;
+}
+
+text.value {
+  font-size: 10px;
+}
+
 /* http://css-tricks.com/examples/hrs/ */
 hr {
   margin: 35px 200px 0 200px;

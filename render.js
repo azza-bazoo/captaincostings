@@ -1,7 +1,7 @@
 
-
 var chart_size = {
-  "height": 40,
+  "column": 40,
+  "height": 40 * 3,
   "width": 400,
   "margin": 4,
   "zero": 400/2
@@ -10,36 +10,38 @@ var chart_size = {
 var generateScales = function(max_value) {
   return d3.scale.linear()
     .domain([0, max_value])
-    .rangeRound([0, chart_size.width]);
+    .rangeRound([0, chart_size.width / 2]);
 }
 
 var x_scale = generateScales(10000);
+var y_scale = d3.scale.linear()
+  .domain([0, 3])
+  .range([0, chart_size.height]);
 
 var svg_x_value = function(d) {
-  if (d >= 0) { return chart_size.zero; }
-  else { return chart_size.zero + x_scale(d);/* - .5;*/ }
+  if (d.value >= 0) { return chart_size.zero; }
+  else { return chart_size.zero + x_scale(d.value);/* - .5;*/ }
 };
 
 var svg_width_value = function(d) {
-  return Math.abs(x_scale(d));
+  return Math.abs(x_scale(d.value));
 };
 
 var setupChart = function(parent_el) {
-  var y_scale = d3.scale.linear()
-    .domain([0, 1])
-    .range([0, chart_size.height]);
+  // TODO: rather hacky, yes
+  var sample_data = [{ value: 0 }, { value: 0 }, { value: 0 }];
   // parent_el comes from jQuery, i.e. is a list
   var chart = d3.select(parent_el[0]).append("svg")
     .attr("class", "chart")
     .attr("width", chart_size.width)
     .attr("height", chart_size.height);
   chart.selectAll("rect")
-    .data([ 0 ])
+    .data(sample_data)
   .enter().append("rect")
     .attr("x", svg_x_value)
     .attr("y", function(d, i) { return y_scale(i) + chart_size.margin; })
     .attr("width", svg_width_value)
-    .attr("height", (chart_size.height - chart_size.margin * 2));
+    .attr("height", (chart_size.column - chart_size.margin * 2));
   chart.append("line")
     .attr("class", "zero")
     .attr("x1", chart_size.zero)
@@ -49,13 +51,75 @@ var setupChart = function(parent_el) {
   return chart;
 }
 
-var redrawChart = function(chart, new_data) {
+var redrawChart = function(chart, new_data, side) {
+  if (!new_data) { return false; }  // TODO: do this check outside here?
+
+  chart.selectAll("text.label")
+    .data(new_data)
+  .enter().append("text")
+    .attr("class", "label")
+    .attr("x", function(d) {
+      if (d.value > 0) { return chart_size.zero - chart_size.margin; } else { return chart_size.zero + chart_size.margin; }
+    })
+    .attr("text-anchor", function(d) {
+      if (d.value > 0) { return "end"; } else { return "start"; }
+    })
+    .attr("dy", 4)
+    .attr("y", function(d, i) { return y_scale(i) + chart_size.column / 2; })
+    .text(function(d) { if(d.label) { return d.label; } else { return "" } });
+
+  chart.selectAll("text.value")
+    .data(new_data)
+  .enter().append("text")
+    .attr("class", "value")
+    .attr("x", function(d) {
+      if (d.value < 0) { return chart_size.zero - chart_size.margin; } else { return chart_size.zero + chart_size.margin; }
+    })
+    .attr("text-anchor", function(d) {
+      if (d.value < 0) { return "end"; } else { return "start"; }
+    })
+    .attr("fill", function(d) {
+      if ((d.value < 0 && side == "right") || (d.value > 0 && side == "left")) {
+        return "#0c0";
+      } else {
+        return "#f00";
+      }
+    })
+    .attr("dy", 4)
+    .attr("y", function(d, i) { return y_scale(i) + chart_size.column / 2; })
+    .text(function(d) {
+      if ((d.value < 0 && side == "right") || (d.value > 0 && side == "left")) {
+        return "-$" + Math.abs(d.value).toLocaleString();
+      } else {
+        return "$" + Math.abs(d.value).toLocaleString();
+      }
+    });
+
   chart.selectAll("rect")
     .data(new_data)
   .transition()
     .duration(1000)
     .attr("x", svg_x_value)
     .attr("width", svg_width_value);
+}
+
+var getSegmentData = function(segment, key) {
+  if (!data[segment][key]) { return false; }
+
+  var available_items = data[segment][key];
+  var dataset = [];
+
+  available_items.forEach(function(item) {
+    var value = 0;
+    if (item.spending) { value = item.spending; }
+    if (item.saving) { value = 0 - item.saving; }
+    if (item.revenue) { value = 0 - item.revenue; }
+
+    if (key == "alp") { value = 0 - value; }  // due to mirrored graphs; TODO: less hackified
+    dataset.push({ label: item.label, value: value });
+  });
+
+  return dataset;
 }
 
 var charts = {};
@@ -86,8 +150,8 @@ $(function() {
     segment_el.on('inview', function(event, isInView) {
       if (isInView) {
         var segment = $(event.target).attr("rel");
-        redrawChart(charts[segment].left, [5000]);
-        redrawChart(charts[segment].right, [-5000]);
+        redrawChart(charts[segment].left, getSegmentData(segment, "alp"), "left");
+        redrawChart(charts[segment].right, getSegmentData(segment, "lib"), "right");
       }
     });
   }
