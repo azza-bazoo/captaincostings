@@ -59,10 +59,10 @@ data = {
         "label": "Instant asset write-off",
         "revenue": 2905
       },
-      {
+      /*{ // not enough room!
         "label": "Interest withholding tax",
         "revenue": 405
-      },
+      },*/
       {
         "label": "Tax loss carry back",
         "revenue": 950
