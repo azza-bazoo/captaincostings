@@ -1,9 +1,12 @@
+$(function() {
+  var source   = $("#segment_template").html();
+  var template = Handlebars.compile(source);
 
-var source   = document.getElementById("segment_template").innerHTML;
-var template = Handlebars.compile(source);
+  var html = "<hr>";
 
-var html = "<hr>";
+  for (var segment in data) {
+    html += template(data[segment]);
+  }
 
-for (var segment in data) {
-  html += template(segment);
-}
+  $("#main").html(html);
+});
