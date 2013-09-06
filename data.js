@@ -102,7 +102,7 @@ data = {
   },
   "aid": {
     "title": "Foreign aid",
-    "desc": "To fund its road commitments, a Liberal government would significantly cut Australia&#8217;s xxxbn foreign aid budget.",
+    "desc": "To fund its road commitments, a Liberal government would significantly cut Australia&#8217;s  <a href=\"http://www.abc.net.au/news/2013-09-06/an-coalition-aid-cuts-reax/4940604\"> foreign aid budget</a>.",
     "lib": [
       {
         "label": "Cuts to foreign aid",

@@ -81,9 +81,11 @@ var redrawChart = function(chart, new_data) {
     })
     .attr("fill", function(d) {
       if (d.value < 0) {
+//      	return "#2c6d31";
         return "#0c0";
       } else {
         return "#f00";
+//		return "#1e0d6d";
       }
     })
     .attr("dy", 5)

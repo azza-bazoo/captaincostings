@@ -85,6 +85,10 @@ hr { clear: both; }
 
 /* charts */
 
+rect {
+  fill: #7a7a7a;
+}
+
 line.zero {
   stroke: #999;
 }
