@@ -58,7 +58,7 @@ var redrawChart = function(chart, new_data) {
     .attr("width", svg_width_value);
 }
 
-
+var charts = {};
 
 $(function() {
   var source   = $("#segment_template").html();
@@ -75,12 +75,20 @@ $(function() {
 
   for (var segment in data) {
     var segment_el = $(".segment[rel=" + segment + "]");
+    charts[segment] = {};
+
     // alp on left
-    var left_graph = setupChart($(".left_graph", segment_el));
-    redrawChart(left_graph, [5000]);
+    charts[segment].left = setupChart($(".left_graph", segment_el));
 
     // lib on right
-    right_graph = setupChart($(".right_graph", segment_el));
-    redrawChart(right_graph, [-5000]);
+    charts[segment].right = setupChart($(".right_graph", segment_el));
+
+    segment_el.on('inview', function(event, isInView) {
+      if (isInView) {
+        var segment = $(event.target).attr("rel");
+        redrawChart(charts[segment].left, [5000]);
+        redrawChart(charts[segment].right, [-5000]);
+      }
+    });
   }
 });
