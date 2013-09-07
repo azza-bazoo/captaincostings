@@ -14,6 +14,8 @@ Many election promises are too small, in the scheme of the $375 billion Federal 
 
 Only the differences between parties are shown; for instance, the Gonski school funding package is now [agreed to by both parties](http://www.theguardian.com/world/2013/aug/02/tony-abbott-embraces-gonski-schools). Likewise, some infrastructure projects have close to equal funding from both sides, even though one or the other has made a bigger fuss about it.
 
+Broadband is a big (and expensive) policy difference between the parties, but the Liberal costings obscure their expected savings in amongst other public debt, so it&#8217;s been left out for simplicity.
+
 The Liberal document also claims a $1.1bn &#8220;dividend from stopping the boats&#8221;, but it&#8217;s not clear that one side will actually stop boat arrivals any more than the other, especially since their policies are so similar.
 
 ### Who are you?
