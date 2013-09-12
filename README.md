@@ -1,6 +1,6 @@
 ## Captain Costings
 
-A little web infographic about election campaign costings.
+A little web infographic about campaign promises and costings during Australia&#8217;s [2013 federal election](http://en.wikipedia.org/wiki/Australian_federal_election,_2013).
 
 ### What are your sources?
 
@@ -22,6 +22,6 @@ The Liberal document also claims a $1.1bn &#8220;dividend from stopping the boat
 
 I&#8217;m [Hourann Bosci](http://hourann.com) ([@daBosq on Twitter](http://twitter.com/daBosq)). I am not affiliated with any party, but am disappointed at the less-than-clear media coverage of each party&#8217;s spending, so I rushed this out the night before.
 
-This site&#8217;s source code is right here! Hosting is by the fine folk at [OrionVM](http://www.orionvm.com.au) in Sydney. Graphics are generated [in D3.js](http://d3js.org/). The pirates [come <a href="http://www.shutterstock.com/pic-86860939/stock-vector-pure-series-hand-drawn-pirate-icon-set.html">from](http://www.shutterstock.com/pic-96796096/stock-vector-cartoon-pirate.html) [Shutterstock](http://www.shutterstock.com/pic-86860960/stock-vector-pure-series-hand-drawn-pirate-icon-set.html).
+This site&#8217;s source code is right here! Graphics are generated [in D3.js](http://d3js.org/). The pirates [come <a href="http://www.shutterstock.com/pic-86860939/stock-vector-pure-series-hand-drawn-pirate-icon-set.html">from](http://www.shutterstock.com/pic-96796096/stock-vector-cartoon-pirate.html) [Shutterstock](http://www.shutterstock.com/pic-86860960/stock-vector-pure-series-hand-drawn-pirate-icon-set.html).
 
 All other text is released under the [Creative Commons Attribution-ShareAlike 3.0 Australia](http://creativecommons.org/licenses/by-sa/3.0/au/) licence.
